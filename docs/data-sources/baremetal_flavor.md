@@ -60,3 +60,5 @@ output "flavor_output" {
 ## Attributes Reference
 In addition to all arguments above, the following attributes are exported:
 - `display_name` *string* &rarr;  The project-specific display name of the flavor.
+
+

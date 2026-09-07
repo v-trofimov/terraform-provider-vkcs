@@ -8,7 +8,7 @@ output "display_name_before" {
 }
 
 # Write a project-specific display name.
-resource "vkcs_baremetal_flavor" "main" {
+resource "vkcs_baremetal_flavor_display_name" "main" {
   id           = data.vkcs_baremetal_flavor.selected.id
   display_name = "Terraform managed bare metal flavor"
 }
@@ -18,7 +18,7 @@ resource "vkcs_baremetal_flavor" "main" {
 
 # The data source reads the value written by the resource.
 data "vkcs_baremetal_flavor" "updated" {
-  id = vkcs_baremetal_flavor.main.id
+  id = vkcs_baremetal_flavor_display_name.main.id
 }
 
 output "display_name" {

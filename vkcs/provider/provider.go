@@ -361,7 +361,7 @@ func (p *vkcsProvider) DataSources(_ context.Context) []func() datasource.DataSo
 func (p *vkcsProvider) Resources(_ context.Context) []func() resource.Resource {
 	return []func() resource.Resource{
 		backup.NewPlanResource,
-		baremetal.NewFlavorResource,
+		baremetal.NewFlavorDisplayNameResource,
 		baremetal.NewServerResource,
 		cdn.NewOriginGroupResource,
 		cdn.NewResourceResource,
