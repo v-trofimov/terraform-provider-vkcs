@@ -63,6 +63,7 @@ func (d *FlavorDataSource) Schema(ctx context.Context, req datasource.SchemaRequ
 				},
 			},
 			"name": schema.StringAttribute{
+				Computed:    true,
 				Optional:    true,
 				Description: "The name of the flavor.",
 			},
