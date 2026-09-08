@@ -31,13 +31,8 @@ resource "vkcs_baremetal_flavor_display_name" "main" {
 # Rewrite the display name by changing the value above and running:
 # terraform apply
 
-# The data source reads the value written by the resource.
-data "vkcs_baremetal_flavor" "updated" {
-  id = vkcs_baremetal_flavor_display_name.main.id
-}
-
 output "display_name" {
-  value = data.vkcs_baremetal_flavor.updated.display_name
+  value = vkcs_baremetal_flavor_display_name.main.display_name
 }
 
 # Reset the display name by running:
@@ -49,6 +44,7 @@ output "display_name" {
 - `display_name` **required** *string* &rarr;  The project-specific display name of the flavor.
 
 - `id` **required** *string* &rarr;  The UUID of the existing flavor.
+
 
 ## Attributes Reference
 No additional attributes are exported.
